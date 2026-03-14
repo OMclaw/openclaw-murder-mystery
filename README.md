@@ -173,8 +173,8 @@ AI: 🎉 恭喜！你找出了真凶！
 
 | 变量名 | 说明 | 必需 | 示例 |
 |--------|------|------|------|
-| `API_KEY` | 大模型 API Key | 否 | `sk-xxx` |
-| `GITHUB_TOKEN` | GitHub Token | 否 | `ghp_xxx` |
+| `API_KEY` | 大模型 API Key | 否 | `sk-YOUR-API-KEY-HERE` |
+| `GITHUB_TOKEN` | GitHub Token | 否 | `ghp_YOUR-TOKEN-HERE` |
 
 **说明：**
 - 不配置 `API_KEY` 会自动使用规则模式（无需 API）
@@ -193,8 +193,8 @@ GITHUB_TOKEN = "ghp_your-token-here"
 #### 方式 2：环境变量
 
 ```bash
-export API_KEY=sk-xxx
-export GITHUB_TOKEN=ghp_xxx
+export API_KEY=sk-YOUR-API-KEY-HERE
+export GITHUB_TOKEN=ghp_YOUR-TOKEN-HERE
 ```
 
 #### 方式 3：代码中读取
@@ -298,8 +298,8 @@ API_KEY = "sk-57c62abc0ecb43e587bdc8fb4fbe9a8e"
 
 | 提供商 | 模型 | 配置方式 |
 |--------|------|----------|
-| **OpenAI** | GPT-4o | `API_KEY=sk-xxx` |
-| **通义千问** | Qwen3.5 | `API_KEY=sk-xxx` |
+| **OpenAI** | GPT-4o | `API_KEY=sk-YOUR-API-KEY-HERE` |
+| **通义千问** | Qwen3.5 | `API_KEY=sk-YOUR-API-KEY-HERE` |
 | **Anthropic** | Claude 3.5 | `API_KEY=sk-ant-xxx` |
 | **Google** | Gemini 2.0 | `API_KEY=xxx` |
 | **Ollama** | 本地模型 | `OLLAMA_HOST=localhost:11434` |
@@ -311,7 +311,7 @@ API_KEY = "sk-57c62abc0ecb43e587bdc8fb4fbe9a8e"
 export API_KEY=sk-proj-xxx
 
 # 通义千问
-export API_KEY=sk-xxx
+export API_KEY=sk-YOUR-API-KEY-HERE
 
 # Ollama（本地）
 export OLLAMA_HOST=http://localhost:11434
