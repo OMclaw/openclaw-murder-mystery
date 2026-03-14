@@ -1,0 +1,129 @@
+{
+  "clues": {
+    "physical": [
+      {
+        "id": "poison_bottle",
+        "name": "空药瓶",
+        "location": "书房垃圾桶",
+        "description": "一个空的氰化物药瓶，标签被撕掉一半",
+        "found_by": "默认发现",
+        "importance": "⭐⭐⭐⭐⭐",
+        "related_to": "gardener"
+      },
+      {
+        "id": "tea_cup",
+        "name": "茶杯",
+        "location": "书桌上",
+        "description": "赵老爷的茶杯，内有残留液体，检测出氰化物",
+        "found_by": "默认发现",
+        "importance": "⭐⭐⭐⭐⭐",
+        "related_to": "victim"
+      },
+      {
+        "id": "account_book",
+        "name": "账本",
+        "location": "书桌上",
+        "description": "打开的账本，记录着近期大额支出，最后一页被撕掉",
+        "found_by": "默认发现",
+        "importance": "⭐⭐⭐",
+        "related_to": "son"
+      },
+      {
+        "id": "vent_pipe",
+        "name": "通风管道",
+        "location": "书房窗户上方",
+        "description": "直径约 5cm 的通风管道，外侧有轻微划痕",
+        "found_by": "检查书房",
+        "importance": "⭐⭐⭐⭐⭐",
+        "related_to": "gardener"
+      },
+      {
+        "id": "key",
+        "name": "书房钥匙",
+        "location": "死者口袋",
+        "description": "书房唯一钥匙，说明是密室",
+        "found_by": "默认发现",
+        "importance": "⭐⭐⭐⭐",
+        "related_to": "victim"
+      }
+    ],
+    "testimony": [
+      {
+        "id": "butler_testimony",
+        "name": "管家的证词",
+        "content": "昨晚 23:00 左右，我看到夫人从书房出来，神色慌张",
+        "witness": "butler",
+        "truth_level": 0.8,
+        "related_to": "wife"
+      },
+      {
+        "id": "maid_testimony",
+        "name": "女仆的证词",
+        "content": "今天下午看到少爷在书房翻东西，好像在找遗嘱",
+        "witness": "maid",
+        "truth_level": 1.0,
+        "related_to": "son"
+      },
+      {
+        "id": "gardener_testimony",
+        "name": "园丁的证词",
+        "content": "昨晚 23:30 书房灯灭了，但 23:45 又亮了一下",
+        "witness": "gardener",
+        "truth_level": 1.0,
+        "related_to": "gardener"
+      },
+      {
+        "id": "son_testimony",
+        "name": "少爷的证词",
+        "content": "昨晚一直在花园抽烟，刘园丁可以证明",
+        "witness": "son",
+        "truth_level": 0.9,
+        "related_to": "son"
+      }
+    ],
+    "hidden": [
+      {
+        "id": "vent_fingerprint",
+        "name": "通风管道指纹",
+        "description": "通风管道外侧提取到一枚指纹，属于刘园丁",
+        "unlock_condition": "询问园丁昨晚是否靠近过书房，且已发现通风管道",
+        "importance": "⭐⭐⭐⭐⭐",
+        "related_to": "gardener"
+      },
+      {
+        "id": "photo",
+        "name": "旧照片",
+        "description": "在园丁房间发现一张旧照片，是他女儿和赵老爷的合影，背面写着'还我女儿'",
+        "unlock_condition": "搜查园丁房间或询问园丁女儿情况",
+        "importance": "⭐⭐⭐⭐⭐",
+        "related_to": "gardener"
+      },
+      {
+        "id": "will",
+        "name": "遗嘱草稿",
+        "description": "被撕掉的遗嘱页，内容是赵老爷要把大部分财产捐出去",
+        "unlock_condition": "询问少爷遗嘱内容或检查垃圾桶",
+        "importance": "⭐⭐⭐⭐",
+        "related_to": "son"
+      }
+    ]
+  },
+  
+  "solution": {
+    "killer": "gardener",
+    "killer_name": "刘园丁",
+    "motive": "女儿三年前被赵老爷逼死（强占后抛弃），潜伏 3 年精心策划复仇",
+    "method": "利用花园工作熟悉地形，通过通风管道在 23:45 投毒",
+    "timeline": [
+      "23:00 - 夫人进入书房，与赵老爷争吵后离开",
+      "23:30 - 书房灯灭，赵老爷准备休息",
+      "23:45 - 园丁从花园用长杆通过通风管道投入氰化物",
+      "24:00 - 女仆发现赵老爷死亡"
+    ],
+    "key_evidence": [
+      "通风管道上的指纹",
+      "园丁房间的旧照片",
+      "23:45 书房灯亮的时间点"
+    ]
+  }
+}

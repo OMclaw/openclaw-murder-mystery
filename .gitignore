@@ -1,0 +1,98 @@
+# 🔒 安全配置 - 排除敏感文件
+
+# 环境变量文件
+.env
+.env.local
+.env.*.local
+!.env.example
+!.env.template
+
+# API Key 和配置文件
+*_config.py
+*_config.json
+*secret*.py
+*credential*.py
+*password*.py
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+
+# 可能包含 API Key 的文件
+generate_*.py
+image_gen*.py
+*_api_key*.py
+*_token*.py
+README_IMAGES.md
+
+# 本地配置文件
+config.local.json
+settings.local.py
+*.local
+*.local.json
+*.local.yaml
+*.local.yml
+
+# 日志文件（可能包含敏感信息）
+*.log
+logs/
+
+# 临时文件
+*.tmp
+*.temp
+tmp/
+temp/
+
+# 备份文件
+*.bak
+*.backup
+*.old
+
+# IDE 和编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 测试和覆盖率
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# 其他
+*.orig
+*.rej

@@ -1,0 +1,69 @@
+# 庄园谋杀案 - 剧本配置
+
+scenario:
+  name: "庄园谋杀案"
+  title: "午夜庄园谋杀案"
+  difficulty: "⭐⭐⭐⭐"
+  duration: "30-60 分钟"
+  type: "本格推理"
+
+story:
+  background: |
+    1930 年，上海郊外的一座豪华庄园。
+    庄园主人赵老爷是当地有名的富商，为人严厉，树敌众多。
+    
+    今晚，赵老爷在书房处理账目，家人都已回房休息。
+    午夜 12 点，一声尖叫划破夜空...
+    
+    当众人赶到书房时，赵老爷趴在书桌上，已经没有了呼吸。
+    书房的门从里面反锁，窗户紧闭，是一个完美的"密室"。
+    
+    你是被请来的侦探，必须在天亮前找出真凶！
+  
+  victim:
+    name: "赵老爷"
+    age: 58
+    occupation: "富商"
+    cause_of_death: "氰化物中毒"
+    time_of_death: "约 23:30-24:00"
+  
+  location:
+    name: "赵府书房"
+    description: |
+      书房位于二楼，装修豪华。
+      书桌靠窗，桌上有账本、钢笔、茶杯。
+      房门可以从内部反锁，钥匙在死者口袋中。
+      窗户紧闭，从外面无法进入。
+
+gameplay:
+  max_questions: 10
+  hints_available: 2
+  hint_cost: 1  # 每次提示消耗 1 个问题额度
+  
+  victory_conditions:
+    - "正确指认真凶"
+    - "说明作案动机"
+    - "解释作案手法"
+  
+  failure_conditions:
+    - "问题用尽仍未找出真凶"
+    - "指认错误"
+    - "玩家主动放弃"
+
+scoring:
+  perfect:
+    condition: "10 问内找出真凶 + 完整推理"
+    stars: 5
+    title: "神探"
+  success:
+    condition: "10 问内找出真凶"
+    stars: 4
+    title: "优秀侦探"
+  pass:
+    condition: "提示后找出真凶"
+    stars: 3
+    title: "合格侦探"
+  fail:
+    condition: "未能找出真凶"
+    stars: 1
+    title: "需要努力"
